@@ -9,6 +9,8 @@ import HandwrittenMessage from "@/components/handwritten-message"
 import RSVPSection from "@/components/rsvp-section"
 import PhotoSharingSection from "@/components/photo-sharing-section"
 import LocationVideo from "@/components/location-video"
+import DressCodeSection from "@/components/dress-code-section"
+import CeremonySection from "@/components/ceremony-section"
 import { Variants } from "framer-motion"
 import { useLanguage } from "@/contexts/language-context"
 
@@ -321,6 +323,24 @@ export default function ProAnimatedEngagementPage({ onImageLoad }: ProAnimatedEn
             </motion.div>
           </div>
         </div>
+
+        <motion.div 
+          className="text-center mt-8 space-y-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <p className="text-xl md:text-2xl font-light text-gray-800">
+            We fell in love.
+          </p>
+          <p className="text-xl md:text-2xl font-light text-gray-800">
+            Things escalated.
+          </p>
+          <p className="text-xl md:text-2xl font-light text-gray-800">
+            Now we're throwing a party
+          </p>
+        </motion.div>
       </motion.section>
 
       {/* Section 4: Our Love Story
@@ -358,10 +378,12 @@ export default function ProAnimatedEngagementPage({ onImageLoad }: ProAnimatedEn
               <p className="text-xl md:text-2xl font-light text-center">
                 But this was only the beginning of our fairytale. Our love kept growing, blooming brighter with every heartbeat… until we decided to make it forever and write our own "happily ever after" on November 14, 2025.
               </p>
-            </motion.div>
-          </div>
-        </div>
-      </motion.section> */}
+
+      {/* Section 3: Ceremony Details */}
+      <CeremonySection />
+
+      {/* Section 4: Dress Code */}
+      <DressCodeSection />
 
       {/* Section 5: Leave Us a Message */}
       <motion.section
@@ -426,7 +448,8 @@ export default function ProAnimatedEngagementPage({ onImageLoad }: ProAnimatedEn
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            {t('cantWaitToCelebrate')}
+            {t('signature')}<br />
+            {t('signature2')}
           </motion.p>
           <div className="flex items-center justify-center gap-3 mb-8">
             <div className="w-12 h-px bg-accent/30" />

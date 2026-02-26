@@ -90,6 +90,27 @@ export const translations = {
     loading: "Loading...",
     loadingInvitation: "Loading invitation...",
     loadingVenueMap: "Loading venue map...",
+
+    // New sections
+    dressCode: "Dress Code",
+    dressCodeText: "Smile. Dance. Misbehave",
+    katbKetab: "Katb Ketab Ceremony",
+    katbKetabTime: "3:00 – 7:00 PM",
+    katbKetabDescription: "Our beloved families are welcome to our Katb Ketab",
+    afterParty: "After Party",
+    afterPartyTime: "8:00 PM",
+    afterPartyDescription: "Adults only (no kids, no rules, just vibes)",
+    loveStory: "Our Love Story",
+    loveStoryLine1: "We fell in love.",
+    loveStoryLine2: "Things escalated.",
+    loveStoryLine3: "Now we're throwing a party",
+    venueDescription: "where promises are made,",
+    venueDescription2: "heels come off,",
+    venueDescription3: "and night gets crazy",
+    farewellNote: "We'll hug, cry, say goodbye…",
+    farewellNote2: "then turn up the music",
+    signature: "Love made us do it.",
+    signature2: "See you on the dance floor"
   },
   ar: {
     // Countdown section
@@ -180,6 +201,27 @@ export const translations = {
     loading: "جاري التحميل...",
     loadingInvitation: "جاري تحميل الدعوة...",
     loadingVenueMap: "جاري تحميل خريطة المكان...",
+
+    // New sections
+    dressCode: "الزي الرسمي",
+    dressCodeText: "ابتسم. ارقص. اسأمر",
+    katbKetab: "حفلة كتاب الكتاب",
+    katbKetabTime: "3:00 – 7:00 مساءً",
+    katbKetabDescription: "عائلاتنا المحبوبة مدعوة لحفلة كتاب الكتاب",
+    afterParty: "ما بعد الحفلة",
+    afterPartyTime: "8:00 مساءً",
+    afterPartyDescription: "للكبار فقط (لا أطفال، لا قواعد، فقط أجواء رائعة)",
+    loveStory: "قصة حبنا",
+    loveStoryLine1: "وقعنا في الحب.",
+    loveStoryLine2: "الأمور تصاعدت.",
+    loveStoryLine3: "والآن نُقيم حفلة",
+    venueDescription: "حيث تُقطع الوعود،",
+    venueDescription2: "تنزيل الأحذية،",
+    venueDescription3: "والليل يجن",
+    farewellNote: "سنحتضن، نبكي، نودع…",
+    farewellNote2: "ثم نرفع الموسيقى",
+    signature: "الحب جعلنا نفعل هذا.",
+    signature2: "نراك على رقصاتنا",
   }
 }
 
