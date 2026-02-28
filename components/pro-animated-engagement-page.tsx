@@ -325,7 +325,7 @@ export default function ProAnimatedEngagementPage({ onImageLoad }: ProAnimatedEn
         </div>
 
         <motion.div 
-          className="text-center mt-8 space-y-4"
+          className="bg-white/50 backdrop-blur-sm border border-white/30 rounded-3xl p-8 md:p-10 shadow-2xl text-center mt-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
