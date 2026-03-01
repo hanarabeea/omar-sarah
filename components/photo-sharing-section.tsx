@@ -7,24 +7,24 @@ import { useLanguage } from '@/contexts/language-context';
 export default function PhotoSharingSection() {
   const { t } = useLanguage();
   return (
-    <section 
-      id="photos" 
+    <section
+      id="photos"
       className="py-16 px-4 md:py-20"
     >
       <div className="max-w-5xl mx-auto">
         <div className="bg-white/50 backdrop-blur-sm border border-white/30 rounded-3xl p-8 md:p-12 shadow-2xl">
-          <motion.div 
+          <motion.div
             className="text-center mb-8"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={{
               hidden: { opacity: 0, y: 20 },
-              visible: { 
-                opacity: 1, 
+              visible: {
+                opacity: 1,
                 y: 0,
-                transition: { 
-                  duration: 0.8, 
+                transition: {
+                  duration: 0.8,
                   ease: "easeOut"
                 }
               }
@@ -34,11 +34,11 @@ export default function PhotoSharingSection() {
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-gray-800 leading-tight mb-4">{t('shareYourPhotos')}</h2>
             <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">{t('uploadPartyPhotos')}</p>
           </motion.div>
-          
+
           <div>
             <div className="text-center">
               <a
-                href="https://drive.google.com/drive/folders/1rutiGfQBHv9Eq9Dw9YHVMbCftWJ4vQIu"
+                href="https://drive.google.com/drive/folders/1qOsLpKKrO4q1nwrRU_aZy_aYnhUy0-1e"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-400 text-white rounded-lg hover:from-blue-500 hover:to-purple-500 transition-all shadow-lg text-lg font-medium"

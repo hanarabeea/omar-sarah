@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description: "Celebrating our wedding - Sarah & Omar",
   applicationName: "digitiva",
   generator: "v0.app",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://abdalla-leanne.digitivaa.com/'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://omar-sara.digitivaa.com/'),
   openGraph: {
     title: "Welcome to Our Wedding",
     description: "Celebrating our wedding - Sarah & Omar",
@@ -58,10 +58,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Preload critical images for immediate loading */}
-        <link 
-          rel="preload" 
-          href="/invitation-design.png?v=2" 
-          as="image" 
+        <link
+          rel="preload"
+          href="/invitation-design.png?v=2"
+          as="image"
           type="image/png"
         />
         {/* Preconnect to domains for faster loading */}
