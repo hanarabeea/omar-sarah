@@ -15,23 +15,18 @@ export default function DressCodeSection() {
     >
       <div className="max-w-4xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-4xl md:text-6xl font-serif text-gray-800 mb-6">
-            {t('dressCode')}
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-pink-300 to-orange-300 mx-auto mb-8"></div>
-        </motion.div>
-
-        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="bg-white/50 backdrop-blur-sm border border-white/30 rounded-3xl p-8 md:p-12 shadow-2xl text-center"
         >
+          <div className="text-center mb-10">
+            <h2 className="text-4xl md:text-6xl font-serif text-gray-800 mb-6">
+              {t('dressCode')}
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-pink-300 to-orange-300 mx-auto"></div>
+          </div>
+
           <div className="text-center space-y-6">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
