@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description: "Celebrating our wedding - Sarah & Omar",
   applicationName: "digitiva",
   generator: "v0.app",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://omar-sara.digitivaa.com/'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://omar-sarah.digitivaa.com/'),
   openGraph: {
     title: "Welcome to Our Wedding",
     description: "Celebrating our wedding - Sarah & Omar",
