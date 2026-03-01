@@ -5,8 +5,8 @@ import nodemailer from 'nodemailer';
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'digitivaa@gmail.com',
-    pass: 'aoqa gsal cmgn qcym',
+    user: process.env.SMTP_USER || 'digitivaa@gmail.com',
+    pass: process.env.SMTP_PASS || 'aoqa gsal cmgn qcym',
   },
 });
 
@@ -14,7 +14,7 @@ export async function POST(request: Request) {
   try {
     const formData = await request.formData();
     const name = formData.get('name') as string;
-    const toEmail = formData.get('to_email') as string || 'Lamasatlea@gmail.com';
+    const toEmail = formData.get('to_email') as string || process.env.CONTACT_EMAIL || 'Sarah.3skar@gmail.com';
     const message = formData.get('message') as string;
     const messageType = formData.get('message_type') as string;
     const rsvpAttending = formData.get('rsvp_attending') as string;
@@ -35,7 +35,7 @@ export async function POST(request: Request) {
     if (imageFile) {
       const imageBytes = await imageFile.arrayBuffer();
       const buffer = Buffer.from(imageBytes);
-      
+
       attachments.push({
         filename: 'handwritten-message.png',
         content: buffer,
@@ -77,7 +77,7 @@ export async function POST(request: Request) {
           <h3 style="color: #92400e; margin: 0 0 10px 0;">RSVP Information</h3>
           <p><strong>Attending:</strong> ${rsvpAttending === 'yes' ? 'Yes, I\'ll be there!' : 'Sorry, can\'t make it'}</p>
       `;
-      
+
       if (rsvpAttending === 'yes' && rsvpName) {
         emailContent += `
           <p><strong>Name:</strong> ${rsvpName}</p>
@@ -85,7 +85,7 @@ export async function POST(request: Request) {
           <p><strong>Total Guests:</strong> ${rsvpGuestCount || '1'}</p>
         `;
       }
-      
+
       emailContent += `</div>`;
     }
 
@@ -99,15 +99,15 @@ export async function POST(request: Request) {
 
     // Send mail
     const info = await transporter.sendMail({
-      from: '"Wedding Website" <digitivaa@gmail.com>',
+      from: `"Wedding Website" <${process.env.SMTP_USER || 'digitivaa@gmail.com'}>`,
       to: toEmail,
       subject: `New Message from ${name} - Wedding Website`,
       html: emailContent,
       attachments
     });
 
-    return Response.json({ 
-      success: true, 
+    return Response.json({
+      success: true,
       message: 'Message sent successfully!',
       messageId: info.messageId
     });
@@ -115,8 +115,8 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error('Error sending email:', error);
     return Response.json(
-      { 
-        success: false, 
+      {
+        success: false,
         message: 'Failed to send message. Please try again later.',
         error: error instanceof Error ? error.message : 'Unknown error'
       },
